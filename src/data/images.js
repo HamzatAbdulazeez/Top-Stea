@@ -1,0 +1,18 @@
+export const IMAGES = {
+  hero1: 'topstea/hero-1',
+  hero2: 'topstea/hero-2',
+  hero3: 'topstea/hero-3',
+  about: 'topstea/about',
+  aboutSecondary: 'topstea/about-2',
+  mechanical: 'topstea/mechanical',
+  electrical: 'topstea/electrical',
+  plumbing: 'topstea/plumbing',
+  fire: 'topstea/fire-protection',
+  elv: 'topstea/elv',
+  methodology: 'topstea/methodology',
+  engagement: 'topstea/engagement',
+  quality: 'topstea/quality',
+  contact: 'topstea/contact',
+  cta: 'topstea/cta',
+  services: 'topstea/services',
+}
