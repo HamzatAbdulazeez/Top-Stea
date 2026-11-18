@@ -18,7 +18,7 @@ export default function FastTrack() {
 
   return (
     <section className="bg-white py-24">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto Resizer px-6">
         <SectionHeading eyebrow="Fast-Track Methodology" title="Fast-Track Project Execution" text={fastTrack.intro} />
         <h3 className="mb-8 text-center font-display text-xl font-bold text-gold">Our Fast-Track Principles</h3>
 
@@ -32,11 +32,10 @@ export default function FastTrack() {
               <button
                 key={p.n}
                 onClick={() => setActive(i)}
-                className={`relative flex w-full items-center gap-5 overflow-hidden rounded-2xl p-5 text-left transition-all duration-300 ${
-                  i === active
+                className={`relative flex w-full items-center gap-5 overflow-hidden rounded-2xl p-5 text-left transition-all duration-300 ${i === active
                     ? 'translate-x-3 bg-gold text-white shadow-xl shadow-gold/30'
                     : 'bg-gold-50 text-charcoal hover:translate-x-1 hover:bg-gold-100'
-                }`}
+                  }`}
               >
                 <span className={`font-display text-3xl font-extrabold ${i === active ? 'text-white/60' : 'text-gold/50'}`}>
                   {p.n}

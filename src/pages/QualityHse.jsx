@@ -11,11 +11,10 @@ function Cards({ items, dark = false }) {
       {items.map((c, i) => (
         <Reveal key={c.title} delay={i * 130} from="zoom">
           <div
-            className={`h-full rounded-3xl p-8 transition duration-500 hover:-translate-y-2 ${
-              dark
+            className={`h-full rounded-3xl p-8 transition duration-500 hover:-translate-y-2 ${dark
                 ? 'border border-white/10 bg-white/5 hover:border-gold hover:bg-gold/15'
                 : 'border-t-4 border-gold bg-white shadow-lg ring-1 ring-charcoal/5 hover:shadow-2xl'
-            }`}
+              }`}
           >
             <span className="font-display text-5xl font-extrabold text-gold/40">0{i + 1}</span>
             <h3 className="mt-2 font-display text-xl font-bold">{c.title}</h3>
@@ -61,7 +60,7 @@ export default function QualityHse() {
 
       {/* HSE */}
       <section className="bg-charcoal py-24 text-white">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto Resizer px-6">
           <SectionHeading light eyebrow="Health, Safety & Environment" title={hse.title} text={hse.text} />
           <Cards items={hse.items} dark />
         </div>
@@ -69,7 +68,7 @@ export default function QualityHse() {
 
       {/* Material & logistics */}
       <section className="bg-white py-24">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto Resizer px-6">
           <SectionHeading eyebrow="Logistics" title={logistics.title} text={logistics.text} />
           <Cards items={logistics.items} />
         </div>
@@ -104,7 +103,7 @@ export default function QualityHse() {
 
       {/* Reporting */}
       <section className="bg-gold-50 py-24">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto Resizer px-6">
           <SectionHeading eyebrow="Project Control" title={reporting.title} text={reporting.text} />
           <div className="grid gap-6 md:grid-cols-3">
             {reporting.columns.map((c, i) => (

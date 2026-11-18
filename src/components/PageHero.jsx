@@ -8,7 +8,7 @@ export default function PageHero({ eyebrow, title, text, image, crumbs = [] }) {
       <CldImage name={image} className="absolute inset-0 -z-20" imgClassName="animate-kenburns" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-charcoal-900/95 via-charcoal/85 to-charcoal/50" />
       <ArrowMark className="absolute -right-10 bottom-0 -z-10 h-72 w-72 animate-float text-gold/25" />
-      <div className="mx-auto max-w-7xl px-6 pb-20 pt-14 md:pb-28">
+      <div className="mx-auto Resizer px-6 pb-20 pt-14 md:pb-28">
         <nav className="animate-fadeUp text-xs font-semibold uppercase tracking-widest text-white/70" aria-label="Breadcrumb">
           <Link to="/" className="hover:text-gold-300">
             Home

@@ -22,7 +22,7 @@ export default function Methodology() {
 
       {/* Project assessment & work-front planning */}
       <section className="bg-white py-24">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto Resizer px-6">
           <SectionHeading eyebrow="Planning" title={assessment.title} />
           <div className="grid gap-10 lg:grid-cols-2">
             <Reveal from="left" className="rounded-3xl bg-gold-50 p-8">
@@ -53,7 +53,7 @@ export default function Methodology() {
 
       {/* Parallel execution */}
       <section className="bg-gold-50 py-24">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto Resizer px-6">
           <SectionHeading eyebrow="Execution" title="Parallel Work-Front Execution" text={parallel.text} />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {parallel.teams.map((t, i) => (
@@ -88,7 +88,7 @@ export default function Methodology() {
 
       {/* Programme recovery */}
       <section className="bg-charcoal py-24 text-white">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto Resizer px-6">
           <SectionHeading light eyebrow="Recovery" title={recovery.title} text={recovery.text} />
           <div className="grid gap-6 md:grid-cols-3">
             {recovery.items.map((r, i) => (

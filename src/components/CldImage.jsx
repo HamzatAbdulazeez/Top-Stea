@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { cld } from '../lib/cloudinary'
+import { resolveImage } from '../lib/cloudinary'
 import { IMAGES } from '../data/images'
 import ArrowMark from './ArrowMark'
 
@@ -17,7 +17,7 @@ export default function CldImage({
 }) {
   const [failed, setFailed] = useState(false)
   const publicId = id || IMAGES[name]
-  const src = cld(publicId, { w, h, crop })
+  const src = resolveImage(publicId, { w, h, crop })
   const showImg = src && !failed
 
   return (

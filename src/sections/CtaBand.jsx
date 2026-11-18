@@ -11,7 +11,7 @@ export default function CtaBand() {
       <CldImage name="cta" className="absolute inset-0 -z-20" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-charcoal-900/95 via-charcoal/90 to-gold-700/80" />
       <ArrowMark className="absolute -left-16 bottom-0 -z-10 h-80 w-80 animate-float text-gold/20" />
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto Resizer px-6">
         <Reveal className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-3 font-display text-xs font-bold uppercase tracking-[0.3em] text-gold-300">
             <span className="h-0.5 w-8 bg-current" /> Get started

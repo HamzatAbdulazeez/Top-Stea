@@ -9,7 +9,7 @@ export default function WhoWeAre({ showLink = true }) {
   return (
     <section className="relative overflow-hidden bg-white py-24">
       <ArrowMark className="absolute -left-20 top-10 h-96 w-96 text-gold/5" />
-      <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
+      <div className="relative mx-auto grid Resizer items-center gap-16 px-6 lg:grid-cols-2">
         <Reveal from="left" className="relative">
           <CldImage name="about" className="aspect-[4/5] rounded-[2rem] shadow-2xl" imgClassName="transition duration-700 hover:scale-105" />
           <CldImage

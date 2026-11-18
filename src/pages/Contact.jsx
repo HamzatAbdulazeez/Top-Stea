@@ -16,7 +16,7 @@ export default function Contact() {
       />
       <section className="relative overflow-hidden bg-gold-50 py-24">
         <ArrowMark className="absolute -right-20 top-10 h-96 w-96 text-gold/10" />
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-5">
+        <div className="relative mx-auto grid Resizer gap-12 px-6 lg:grid-cols-5">
           <Reveal from="left" className="lg:col-span-2">
             <h2 className="font-display text-3xl font-bold md:text-4xl">How it works</h2>
             <ol className="mt-8 space-y-6">

@@ -9,7 +9,7 @@ export default function WorkforceStats() {
     <section className="relative overflow-hidden bg-charcoal py-24 text-white">
       <ArrowMark className="absolute -right-24 top-0 h-[28rem] w-[28rem] text-gold/10" />
       <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(white_1px,transparent_1px),linear-gradient(90deg,white_1px,transparent_1px)] [background-size:56px_56px]" />
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto Resizer px-6">
         <SectionHeading light eyebrow="Technical Capacity" title={workforce.title} text={workforce.text} />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {workforce.stats.map((s, i) => (

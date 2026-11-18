@@ -5,7 +5,7 @@ import { benefits } from '../data/site'
 export default function Benefits() {
   return (
     <section className="bg-white py-24">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto Resizer px-6">
         <SectionHeading eyebrow="Key Benefits" title={benefits.title} text={benefits.text} />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.items.map((b, i) => (

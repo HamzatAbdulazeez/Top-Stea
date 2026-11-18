@@ -524,3 +524,71 @@ export const cta = {
     },
   ],
 }
+
+// ---------------------------------------------------------------------------
+// Services are split into two categories. "Construction" holds the five MEPF
+// services above (`services`); "Maintenance" holds `maintenanceServices` below.
+// To add a maintenance service, copy the House Keeping entry and change the text.
+// ---------------------------------------------------------------------------
+export const maintenanceServices = [
+  {
+    slug: 'house-keeping-services',
+    title: 'House Keeping Services',
+    image: 'housekeeping',
+    short: 'Daily housekeeping, deep cleaning and hygiene services for offices, estates, hospitals and commercial sites.',
+    intro: [
+      'TOP-STEA provides professional housekeeping and cleaning services for offices, corporate spaces, residential estates, hospitals and commercial sites. Our focus is consistent quality, cleanliness, safety and professionalism, every single day.',
+      'For apartment buildings and gated communities we maintain hygiene standards with trained staff, well-equipped teams, eco-friendly cleaning products and scheduled deep cleaning, so shared spaces always look and feel cared for.',
+    ],
+    highlights: [
+      { title: 'Trained Manpower', text: 'Vetted, trained housekeeping staff deployed to match your site and shift pattern.' },
+      { title: 'Defined Processes', text: 'Documented cleaning routines and checklists so the standard is the same every day.' },
+      { title: 'Supervised Delivery', text: 'On-site supervisors inspect the work and keep your facility manager informed.' },
+      { title: 'Safe, Eco-Friendly Materials', text: 'Approved cleaning materials and modern equipment, used with safety first.' },
+    ],
+    detailsTitle: 'Comprehensive cleaning, delivered by trained manpower',
+    detailsIntro: 'Our teams combine trained manpower with defined processes to cover every area of your facility:',
+    details: [
+      'Daily office housekeeping and deep cleaning',
+      'Floor, workstation and washroom cleaning',
+      'Glass, façade and common-area maintenance',
+      'Waste collection and disposal management',
+      'Sanitisation and hygiene services',
+    ],
+    closing:
+      'Supervisors, modern equipment and approved cleaning materials sit behind every shift. The result is a healthier workspace, better employee well-being and a good impression on every visitor.',
+    faqs: [
+      {
+        q: 'What is the minimum number of housekeeping staff a client can hire?',
+        a: 'Team size depends on your site area, usage and shift pattern. Tell us about your facility and we will confirm the right team size in your proposal.',
+      },
+      {
+        q: 'Do you bring your own equipment and cleaning materials?',
+        a: 'Yes. Our teams work with modern equipment and approved cleaning materials, as agreed in the scope of service.',
+      },
+      {
+        q: 'How do I book a visit?',
+        a: 'Use the Book a Visit form on this page. Our team will review your request and get back to you to arrange a site visit.',
+      },
+    ],
+  },
+]
+
+export const serviceCategories = [
+  {
+    slug: 'construction',
+    label: 'Construction',
+    to: PATHS.construction,
+    image: 'construction',
+    text: 'MEPF installation, construction support, manpower supply and full project execution: Mechanical, Electrical, Plumbing, Fire Protection and ELV.',
+    items: services.map((s) => ({ label: s.title, to: PATHS.service(s.slug) })),
+  },
+  {
+    slug: 'maintenance',
+    label: 'Maintenance',
+    to: PATHS.maintenance,
+    image: 'maintenance',
+    text: 'Facility upkeep that keeps buildings clean, safe and running, starting with professional housekeeping services.',
+    items: maintenanceServices.map((s) => ({ label: s.title, to: PATHS.maintenanceService(s.slug) })),
+  },
+]

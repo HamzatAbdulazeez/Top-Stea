@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { company, services } from '../data/site'
+import { company, services, maintenanceServices } from '../data/site'
 import { PATHS } from '../routes/paths'
 import ArrowMark from './ArrowMark'
 
@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-charcoal-900 pt-20 text-white/70">
       <ArrowMark className="absolute -right-16 -top-10 h-80 w-80 text-gold/10" />
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-6 pb-14 md:grid-cols-2 lg:grid-cols-4">
+      <div className="relative mx-auto grid Resizer gap-12 px-6 pb-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <span className="inline-block rounded-xl bg-white px-4 py-3">
             <img src="/logo.png" alt="TOP-STEA" className="h-10 w-auto" />
@@ -45,6 +45,13 @@ export default function Footer() {
             {services.map((s) => (
               <li key={s.slug}>
                 <Link to={PATHS.service(s.slug)} className="inline-block transition hover:translate-x-1.5 hover:text-gold-300">
+                  {s.title}
+                </Link>
+              </li>
+            ))}
+            {maintenanceServices.map((s) => (
+              <li key={s.slug}>
+                <Link to={PATHS.maintenanceService(s.slug)} className="inline-block transition hover:translate-x-1.5 hover:text-gold-300">
                   {s.title}
                 </Link>
               </li>
