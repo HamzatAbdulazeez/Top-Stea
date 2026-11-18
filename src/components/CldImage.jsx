@@ -21,7 +21,7 @@ export default function CldImage({
   const showImg = src && !failed
 
   return (
-    <div className={`relative overflow-hidden bg-gradient-to-br from-gold-300 via-gold to-gold-600 ${className}`}>
+    <div className={`${/\babsolute\b/.test(className) ? '' : 'relative'} overflow-hidden bg-gradient-to-br from-gold-300 via-gold to-gold-600 ${className}`}>
       {!showImg && (
         <div className="absolute inset-0 grid place-items-center">
           <ArrowMark className="h-1/2 max-h-40 w-auto text-white/20" />

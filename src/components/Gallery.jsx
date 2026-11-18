@@ -30,43 +30,20 @@ export default function Gallery({ images = [], alt = 'Project photo' }) {
 
   return (
     <>
-      <div className="grid auto-rows-[180px] grid-cols-2 gap-4 md:auto-rows-[210px] md:grid-cols-4">
-        {list.map((ref, i) => {
-          const canOpen = Boolean(resolveImage(ref))
-          const big = i === 0
-          return (
-            <Reveal
-              key={ref + i}
-              delay={(i % 4) * 90}
-              from="zoom"
-              className={`${big ? 'col-span-2 row-span-2' : i === 3 ? 'md:col-span-2' : ''}`}
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {list.map((ref, i) => (
+          <Reveal key={ref + i} delay={(i % 3) * 90}>
+            <button
+              type="button"
+              disabled={!resolveImage(ref)}
+              onClick={() => setOpen(i)}
+              aria-label={`Open photo ${i + 1}`}
+              className="block w-full overflow-hidden rounded-2xl shadow-md transition hover:shadow-xl disabled:cursor-default"
             >
-              <button
-                type="button"
-                disabled={!canOpen}
-                onClick={() => setOpen(i)}
-                aria-label={`Open photo ${i + 1}`}
-                className="group relative block h-full w-full overflow-hidden rounded-2xl bg-gold-100 shadow-md disabled:cursor-default"
-              >
-                <CldImage
-                  id={ref}
-                  alt={`${alt} ${i + 1}`}
-                  w={big ? 1200 : 700}
-                  className="absolute inset-0"
-                  imgClassName="transition duration-700 group-hover:scale-110"
-                />
-                {canOpen && (
-                  <>
-                    <span className="absolute inset-0 bg-gradient-to-t from-charcoal-900/70 via-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
-                    <span className="absolute bottom-4 right-4 grid h-11 w-11 translate-y-3 place-items-center rounded-full bg-gold text-2xl text-white opacity-0 shadow-lg transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                      +
-                    </span>
-                  </>
-                )}
-              </button>
-            </Reveal>
-          )
-        })}
+              <CldImage id={ref} alt={`${alt} ${i + 1}`} w={800} className="aspect-[4/3] w-full" imgClassName="transition duration-500 hover:scale-105" />
+            </button>
+          </Reveal>
+        ))}
       </div>
 
       {open !== null && bigSrc && (

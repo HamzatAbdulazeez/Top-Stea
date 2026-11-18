@@ -20,7 +20,7 @@ export const heroSlides = [
     cta2: { label: 'Explore Services', to: '/services' },
   },
   {
-    image: 'https://res.cloudinary.com/ddj0k8gdw/image/upload/v1794983357/Top-Stea-images/Picture7_axbfew.png',
+    image: 'https://res.cloudinary.com/ddj0k8gdw/image/upload/v1794984825/construcao_wqkg3g.jpg',
     alt: 'Rapid mobilisation of technical teams',
     kicker: 'Fast-track delivery',
     title: 'Rapid mobilisation.',
@@ -30,7 +30,7 @@ export const heroSlides = [
     cta2: { label: 'Submit Your Scope', to: '/contact' },
   },
   {
-    image: 'https://res.cloudinary.com/ddj0k8gdw/image/upload/v1794983359/Top-Stea-images/Picture11_ilwtk0.png',
+    image: 'https://res.cloudinary.com/ddj0k8gdw/image/upload/v1794984671/professional-black-african-engineer-service-heavy-machine-in-heavy-industry-factory-photo_q7sjsh.jpg',
     alt: 'Flexible MEPF project delivery',
     kicker: 'Two engagement models',
     title: 'Flexible MEPF delivery.',
