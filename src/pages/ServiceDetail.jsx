@@ -79,7 +79,7 @@ export default function ServiceDetail() {
               <Reveal key={g.title} delay={i * 130} from="zoom">
                 <article className="group h-full overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-charcoal/5 transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
                   <div className="relative h-56 overflow-hidden">
-                    <CldImage id={groupImages[i]} w={900} className="absolute inset-0" imgClassName="transition duration-700 group-hover:scale-110" />
+                    <CldImage id={groupImages[i]} name={s.image} w={900} className="absolute inset-0" imgClassName="transition duration-700 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/70 to-transparent" />
                     <span className="absolute left-5 top-5 font-display text-5xl font-extrabold text-white/30">0{i + 1}</span>
                     <span className="absolute -bottom-6 right-6 grid h-14 w-14 place-items-center rounded-2xl bg-gold text-white shadow-lg transition duration-500 group-hover:rotate-12">

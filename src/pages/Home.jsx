@@ -3,6 +3,7 @@ import Ticker from '../sections/Ticker'
 import WhoWeAre from '../sections/WhoWeAre'
 import ServiceModel from '../sections/ServiceModel'
 import CoreServices from '../sections/CoreServices'
+import Divisions from '../sections/Divisions'
 import WorkforceStats from '../sections/WorkforceStats'
 import FastTrack from '../sections/FastTrack'
 import Mobilisation from '../sections/Mobilisation'
@@ -17,6 +18,7 @@ export default function Home() {
       <WhoWeAre />
       <ServiceModel />
       <CoreServices />
+      <Divisions />
       <WorkforceStats />
       <FastTrack />
       <Mobilisation />

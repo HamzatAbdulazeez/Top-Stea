@@ -16,7 +16,7 @@ export default function About() {
         image="about"
         crumbs={[['About']]}
       />
-      <WhoWeAre showLink={false} />
+      <WhoWeAre extended />
       <ServiceModel />
       <WorkforceStats />
       <Benefits />

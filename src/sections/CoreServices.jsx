@@ -4,7 +4,7 @@ import CldImage from '../components/CldImage'
 import Icon from '../components/Icon'
 import Reveal from '../components/Reveal'
 import SectionHeading from '../components/SectionHeading'
-import { services, disciplinesNote } from '../data/site'
+import { coreServices as services, disciplinesNote } from '../data/site'
 import { PATHS } from '../routes/paths'
 
 // Image-led accordion: on desktop the hovered service opens up wide, the others fold into slim

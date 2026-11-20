@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { company, services, maintenanceServices } from '../data/site'
+import { company, coreServices, maintenanceServices } from '../data/site'
+import SocialLinks from './SocialLinks'
 import { PATHS } from '../routes/paths'
 import ArrowMark from './ArrowMark'
 
@@ -24,6 +25,7 @@ export default function Footer() {
             Professional MEPF installation, construction support, manpower supply and full project execution.
           </p>
           <p className="mt-3 font-display text-sm font-bold text-gold-300">{company.tagline}</p>
+          <SocialLinks className="mt-6" />
         </div>
 
         <div>
@@ -42,20 +44,30 @@ export default function Footer() {
         <div>
           <h4 className="mb-5 font-display font-bold uppercase tracking-wider text-white">Services</h4>
           <ul className="space-y-3 text-sm">
-            {services.map((s) => (
+            {coreServices.map((s) => (
               <li key={s.slug}>
                 <Link to={PATHS.service(s.slug)} className="inline-block transition hover:translate-x-1.5 hover:text-gold-300">
                   {s.title}
                 </Link>
               </li>
             ))}
-            {maintenanceServices.map((s) => (
+            <li>
+              <Link to={PATHS.construction} className="inline-block font-semibold text-gold-300 transition hover:translate-x-1.5 hover:text-white">
+                All construction services →
+              </Link>
+            </li>
+            {maintenanceServices.slice(0, 4).map((s) => (
               <li key={s.slug}>
                 <Link to={PATHS.maintenanceService(s.slug)} className="inline-block transition hover:translate-x-1.5 hover:text-gold-300">
                   {s.title}
                 </Link>
               </li>
             ))}
+            <li>
+              <Link to={PATHS.maintenance} className="inline-block font-semibold text-gold-300 transition hover:translate-x-1.5 hover:text-white">
+                All maintenance services →
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -72,15 +84,24 @@ export default function Footer() {
                 Request a Meeting
               </Link>
             </li>
-            {company.email && (
-              <li>
-                <a href={`mailto:${company.email}`} className="hover:text-gold-300">
-                  {company.email}
+            <li>
+              <a href={company.phoneHref} className="hover:text-gold-300">
+                {company.phone}
+              </a>
+            </li>
+            <li>
+              <a href={company.whatsappHref} target="_blank" rel="noreferrer" className="hover:text-gold-300">
+                WhatsApp: {company.phone}
+              </a>
+            </li>
+            {company.emails.map((m) => (
+              <li key={m}>
+                <a href={`mailto:${m}`} className="break-all hover:text-gold-300">
+                  {m}
                 </a>
               </li>
-            )}
-            {company.phone && <li>{company.phone}</li>}
-            {company.address && <li>{company.address}</li>}
+            ))}
+            <li className="leading-relaxed">{company.address}</li>
             <li>
               <a href={company.url} target="_blank" rel="noreferrer" className="font-semibold text-gold-300 hover:text-white">
                 {company.website}

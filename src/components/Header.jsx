@@ -125,7 +125,7 @@ export default function Header() {
 
                             {/* level 2: the pages inside the category (opens on click) */}
                             <div
-                              className={`absolute left-full top-0 w-80 pl-3 transition-all duration-300 ${
+                              className={`absolute left-full top-0 w-[34rem] pl-3 transition-all duration-300 ${
                                 open ? 'visible translate-x-0 opacity-100' : 'invisible -translate-x-2 opacity-0'
                               }`}
                             >
@@ -136,7 +136,7 @@ export default function Header() {
                                 >
                                   All {c.label} <span>→</span>
                                 </Link>
-                                {c.items.map((it) => (
+                                <div className="grid grid-cols-2 gap-x-1">{c.items.map((it) => (
                                   <Link
                                     key={it.to}
                                     to={it.to}
@@ -144,7 +144,7 @@ export default function Header() {
                                   >
                                     {it.label}
                                   </Link>
-                                ))}
+                                ))}</div>
                               </div>
                             </div>
                           </div>

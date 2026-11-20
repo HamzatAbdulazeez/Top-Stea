@@ -1,5 +1,6 @@
-// All copy comes from "TOP-STEA Technical Capacity & Approach Methodology" (October 2026).
 import { PATHS } from '../routes/paths'
+import { extraServices } from './moreServices'
+import { moreMaintenance } from './maintenanceMore'
 
 export const company = {
   name: 'TOP-STEA',
@@ -7,12 +8,23 @@ export const company = {
   website: 'www.topstea.com',
   url: 'https://www.topstea.com',
   // Not in the document: fill these in when you have them and they will appear in the footer/contact page.
-  email: '',
-  phone: '',
-  address: '',
+  email: 'projects@top-stea.com',
+  emails: ['projects@top-stea.com', 'topsteaglobalimited@gmail.com'],
+  phone: '+234 802 329 2918',
+  phoneHref: 'tel:+2348023292918',
+  whatsappHref: 'https://wa.me/2348023292918?text=Hello%20TOP-STEA%2C%20I%20would%20like%20to%20make%20an%20enquiry.',
+  address: 'Lake Point Towers, 403 Close, Fourth Avenue, Banana Island, Ikoyi, Lagos, Nigeria.',
+  // Social handle is "Top-Stea" on every network. Check each link opens the right page and edit here if a handle differs.
+  socials: [
+    { name: 'Facebook', href: 'https://www.facebook.com/Top-Stea' },
+    { name: 'Instagram', href: 'https://www.instagram.com/Top-Stea' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/Top-Stea' },
+    { name: 'X', href: 'https://x.com/Top-Stea' },
+    { name: 'YouTube', href: 'https://www.youtube.com/@Top-Stea' },
+  ],
 }
 
-export const services = [
+export const coreServices = [
   {
     slug: 'mechanical',
     title: 'Mechanical Services',
@@ -134,6 +146,9 @@ export const services = [
   },
 ]
 
+// the five core disciplines (home-page panels) + extra construction services (menu, pages, footer)
+export const services = [...coreServices, ...extraServices]
+
 export const nav = [
   { label: 'Home', to: PATHS.home, end: true },
   { label: 'About', to: PATHS.about },
@@ -148,6 +163,9 @@ export const whoWeAre = [
   'We serve clients across commercial, industrial, institutional, residential, and infrastructure sectors delivering qualified technical manpower, experienced site supervision, and specialist MEPF installation teams for both new-build and renovation projects.',
   'Our model is built for flexibility, speed, and accountability allowing clients and principal contractors to maintain programme, quality, safety, and productivity targets without compromising engineering standards.',
 ]
+
+export const whoWeAreExtended =
+  'Having HVAC, electrical, plumbing, fire protection and controls disciplines under one roof allows constant communication between teams. Projects proceed more smoothly, each discipline is completed in less time, and clients save both time and money.'
 
 export const sectors = ['Commercial', 'Industrial', 'Institutional', 'Residential', 'Infrastructure']
 
@@ -530,7 +548,7 @@ export const cta = {
 // services above (`services`); "Maintenance" holds `maintenanceServices` below.
 // To add a maintenance service, copy the House Keeping entry and change the text.
 // ---------------------------------------------------------------------------
-export const maintenanceServices = [
+const baseMaintenance = [
   {
     slug: 'house-keeping-services',
     title: 'House Keeping Services',
@@ -574,6 +592,8 @@ export const maintenanceServices = [
   },
 ]
 
+export const maintenanceServices = [...baseMaintenance, ...moreMaintenance]
+
 export const serviceCategories = [
   {
     slug: 'construction',
@@ -588,7 +608,7 @@ export const serviceCategories = [
     label: 'Maintenance',
     to: PATHS.maintenance,
     image: 'maintenance',
-    text: 'Facility upkeep that keeps buildings clean, safe and running, starting with professional housekeeping services.',
+    text: 'Facility upkeep that keeps buildings clean, safe and running, from housekeeping, plumbing and electrical support to security, landscaping and apartment facility management.',
     items: maintenanceServices.map((s) => ({ label: s.title, to: PATHS.maintenanceService(s.slug) })),
   },
 ]
