@@ -14,6 +14,7 @@ const icons = {
   YouTube: <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.3 5 12 5 12 5s-6.3 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.7 2 12 2 12s0 3.3.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.7 19 12 19 12 19s6.3 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.5.4-4.8.4-4.8s0-3.3-.4-4.8zM10 15V9l5.2 3L10 15z" />,
 }
 
+
 export default function SocialLinks({ className = '', tone = 'dark' }) {
   const base = tone === 'dark' ? 'bg-white/10 text-white hover:bg-gold' : 'bg-gold-50 text-gold-600 hover:bg-gold hover:text-white'
   return (
